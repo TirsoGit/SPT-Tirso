@@ -23,7 +23,6 @@ void filter_insert(filter_t *f, int pos, int value);
 void filter_delete(filter_t *f, int value);
 void filter_destroy(filter_t* f);
 
-
 // Initializes filter filling buffer with 'init_val' values.
 void filter_init(filter_t *f, int n, int init_val) {
     if(f==NULL) return;
@@ -90,7 +89,6 @@ void filter_destroy(filter_t* f){
     free(f->samples);
 }
 
-
 // Auxiliary function.
 void displayBuffers(filter_t *f){
     for(int i=0;i<f->window;i++)
@@ -102,7 +100,6 @@ void displayArray(int *s, int n){
     for(int i=0;i<n;i++)
         printf("[%d],",s[i]);
 }
-
 
 int main() {
     /* Test case */
