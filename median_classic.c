@@ -46,8 +46,7 @@ int filter_add(filter_t *f, int value){
     return tmp;
 }
 
-// Insert a new sample 'value 'in the shift left register extracting & 
-// remembering the oldest one.
+// Insert a new sample 'value 'in the shift left register extracting the oldest one. 
 void filter_shift(filter_t *f, int value){
     for(int i=0;i<f->window-1;i++)
         f->samples[i]=f->samples[i+1]; // shifts left
