@@ -13,11 +13,11 @@ void print_map(string_view comment, const map<int, int>& m)
  
 // C++11 alternative:
 //  for (const auto& n : m)
-//      std::cout << n.first << " = " << n.second << "; ";
+//      cout << n.first << " = " << n.second << "; ";
 //
 // C++98 alternative
 //  for (std::map<std::string, int>::const_iterator it = m.begin(); it != m.end(); it++)
-//      std::cout << it->first << " = " << it->second << "; ";
+//      cout << it->first << " = " << it->second << "; ";
  
     cout << '\n';
 }
@@ -49,5 +49,5 @@ int main()
     cout << "7) m.size() = " << m.size() << '\n';
  
     m.clear();  // Clears the map
-    cout << std::boolalpha << "8) Map is empty: " << m.empty() << '\n';
+    cout << boolalpha << "8) Map is empty: " << m.empty() << '\n';
 }
