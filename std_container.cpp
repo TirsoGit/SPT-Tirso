@@ -16,7 +16,7 @@ void print_map(string_view comment, const map<int, int>& m)
 //      cout << n.first << " = " << n.second << "; ";
 //
 // C++98 alternative
-//  for (std::map<std::string, int>::const_iterator it = m.begin(); it != m.end(); it++)
+//  for (map<std::string, int>::const_iterator it = m.begin(); it != m.end(); it++)
 //      cout << it->first << " = " << it->second << "; ";
  
     cout << '\n';
