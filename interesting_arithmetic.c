@@ -204,7 +204,7 @@ int transformationFunction(bcdDigits_t bcd, int capacity, bcdDigits_t* fixedNumb
 int main(void){
     printf("TESTING INTERESTING ARITHMETIC [DIGITS=%d]\n",TEST_CAPACITY);
 
-    bcdDigits_t testedNumber, fixedNumber=0;
+    bcdDigits_t testedNumber=0, fixedNumber=0;
     int iterationsCount=-1;
     int testedCapacity=TEST_CAPACITY;
     int identicDigitsCounter=0;
