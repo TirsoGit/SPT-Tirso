@@ -66,7 +66,7 @@ int main() {
     
     printf("TESTING STACK FUNCTIONS [ITERATIONS=%d]\n",TEST_STACK_ITERATIONS);
     /* init */
-    printf("Testing stack [init() function] %s.\n", init(&oneStack)?"PASSED":"NOT PASSED!");
+    printf("Testing stack [init() function] %s.\n",init(&oneStack)?"PASSED":"NOT PASSED!");
     /* push */
     unsigned i;
     for(i=0;i<TEST_STACK_ITERATIONS;i++){
@@ -83,7 +83,7 @@ int main() {
     int val;
     i=TEST_STACK_ITERATIONS;
     while(pop(&oneStack,&val)){
-        printf("Poping [%d] : [value=%d].\n",i,val);
+        printf("Poping [%d] : [value=%d].\n",TEST_STACK_ITERATIONS*2-(i+1),val);
         TEST_STACK_ARRAY[i++]=val; // <<== Test line.
     }
     /* free */
@@ -93,9 +93,9 @@ int main() {
     for(i=0;i<TEST_STACK_ITERATIONS;i++){
         printf("Testing ");
         if(TEST_STACK_ARRAY[i]==TEST_STACK_ARRAY[(TEST_STACK_ITERATIONS*2-1)-i])
-            printf("PUSH [%d] vs POP [%d] with value [%d] ==> PASSED.\n", i, (TEST_STACK_ITERATIONS*2-1)-i,TEST_STACK_ARRAY[i]);
+            printf("PUSH [%d] vs POP [%d] with value [%d] ==> PASSED.\n", i, i,TEST_STACK_ARRAY[i]);
         else
-            printf("PUSH [%d] vs POP [%d] with value [%d] ==> NOT PASSED.\n", i, (TEST_STACK_ITERATIONS*2-1)-i,TEST_STACK_ARRAY[i]);
+            printf("PUSH [%d] vs POP [%d] with value [%d] ==> NOT PASSED.\n", i, i,TEST_STACK_ARRAY[i]);
     }
 
     return 0;
